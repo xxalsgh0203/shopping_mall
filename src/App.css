@@ -24,6 +24,13 @@
   color: white;
 }
 
+.jumbo {
+  background-color: #282c34;
+  background-image: url(./jumboimage.jpeg);
+  background-position: center;
+  color: rgb(223, 218, 215);
+}
+
 .App-link {
   color: #61dafb;
 }
