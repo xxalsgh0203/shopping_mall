@@ -1,7 +1,11 @@
 import './App.css';
+import React, {useState} from 'react';
 import { Navbar, Nav, NavDropdown, Jumbotron, Button} from 'react-bootstrap';
-
+import ProductInfo from './data';
 function App() {
+
+  let [shoes, changeShoes] = useState(ProductInfo);
+
   return (
     <div className="App">
       <Navbar bg="light" expand="lg" className="nav-bar">
@@ -34,25 +38,30 @@ function App() {
 
       <div className="container"> {/*좌우 여백을 예쁘게 잡아줌 (Bootstrap 문법)*/}
         <div className="row"> {/*사이트를 열두개의 column 으로 쪼개겠습니다 */}
-          <div className="col-md-4"> {/*12개 중 4개의 column 을 사용 (3등분) + 모바일에서 세로정렬 */}
-            <img src="https://codingapple1.github.io/shop/shoes1.jpg" width="100%"/>
-            <h4>상품명</h4>
-            <p>상품설명 & 가격</p>
-          </div>
-          <div className="col-md-4">
-            <img src="https://codingapple1.github.io/shop/shoes2.jpg" width="100%"/>
-            <h4>상품명</h4>
-            <p>상품설명 & 가격</p>
-          </div>
-          <div className="col-md-4">
-            <img src="https://codingapple1.github.io/shop/shoes3.jpg" width="100%"/>
-            <h4>상품명</h4>
-            <p>상품설명 & 가격</p>
-          </div> 
+        
+          {
+            shoes.map(function(shoe, i){
+              return (
+                <ShoesinStock shoes={ shoe } i={i} key={i}/>
+              )  
+            })
+          }
+
         </div>
       </div>
     </div>
   );
+}
+
+function ShoesinStock(props) {
+  return (
+    <div className="col-md-4"> {/*12개 중 4개의 column 을 사용 (3등분) + 모바일에서 세로정렬 */}
+      <img src={ 'https://codingapple1.github.io/shop/shoes' + (props.i + 1) + '.jpg' } width="100%" />
+      <h4>{ props.shoes.title }</h4>
+      <p>{ props.shoes.content }</p>
+      <p>{ props.shoes.price }</p>
+    </div>
+  )
 }
 
 export default App;
