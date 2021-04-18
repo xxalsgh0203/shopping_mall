@@ -1,6 +1,17 @@
 import React, {useState} from 'react';
 import { useHistory, useParams } from 'react-router-dom';
+import styled from 'styled-components';
+import './Detail.scss';
 
+
+let DetailBox = styled.div`
+    padding-top : 30px;
+`;
+
+let DetialTitle = styled.h4`
+    font-size : 25px;
+    color : ${ props => props.색상 }
+`;
 function Detail(props) {
 
     let history = useHistory();
@@ -11,6 +22,12 @@ function Detail(props) {
 
     return (
         <div className="container">
+            <DetailBox>
+                <DetialTitle className="red">Details</DetialTitle>
+            </DetailBox>
+            <div className="my-alert-yellow">
+                <p>재고가 얼마 남지 않았습니다</p>
+            </div>
             <div className="row">
                 <div className="col-md-6">
                     <img src={'https://codingapple1.github.io/shop/shoes' + (productDetailFound.id + 1) + '.jpg'} width="100%" />
@@ -19,10 +36,10 @@ function Detail(props) {
                     <h4 className="pt-5">{ productDetailFound.title }</h4>
                     <p>{ productDetailFound.content }</p>
                     <p>{ productDetailFound.price }</p>
-                    <button className="btn btn-danger">주문하기</button> 
+                    <button className="btn btn-danger">Order</button> 
                     <button className="btn btn-danger" onClick={()=>{
                         history.goBack();
-                    }}>뒤로가기</button> 
+                    }}>GoBack</button> 
                 </div>
             </div>
         </div> 

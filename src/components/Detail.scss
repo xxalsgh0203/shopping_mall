@@ -1,0 +1,39 @@
+$maincolor : #ff0000; // 메인컬러를 만들어서 변수에 저장해두고 사용할 수 있음. 색깔코드 기억할 필요 x
+// 대략적인 scss 사용법
+
+@mixin func() { // 함수처럼 만들어서 사용할 수 있음
+    background: #eeee;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+}
+
+.red {
+    color: $maincolor;
+}
+
+.my-alert {
+    @include func();
+}
+
+.my-alert-yellow {
+    @extend .my-alert; // extend 해서 사용할 수 있음
+    background: #ffe591;
+}
+
+
+.my-alert p {
+    margin-bottom: 0;
+}
+
+// scss 는 아래와 같이 nesting 해서 사용할 수 있음
+// div.container {
+//     h4 {
+//         color : blue;
+//     }
+//     p {
+//         color : green;
+//     }
+// }

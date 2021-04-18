@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import ShoesinStock from './ShoesinStock.js'
-import { Navbar, Nav, NavDropdown, Jumbotron, Button} from 'react-bootstrap';
-import { Link, Route, Switch } from 'react-router-dom';
+import {Jumbotron, Button} from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import './Home.scss'
 
 function Home(props) {
     return (
@@ -19,11 +20,11 @@ function Home(props) {
             <div className="container"> {/*좌우 여백을 예쁘게 잡아줌 (Bootstrap 문법)*/}
                 <div className="row"> {/*사이트를 열두개의 column 으로 쪼개겠습니다 */}
                 {
-                props.shoes.map(function(shoe, i){
-                    return (
-                    <Link to={"/detail/" + i}><ShoesinStock shoes={ shoe } i={i} key={i}/></Link>
-                    )  
-                })
+                    props.shoes.map(function(shoe, i){
+                        return (
+                        <Link to={"/detail/" + i}><ShoesinStock shoes={ shoe } i={i} key={i}/></Link>
+                        )  
+                    })
                 }
                 </div>
             </div>

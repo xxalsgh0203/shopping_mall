@@ -37,12 +37,13 @@ function App() {
         </Route>
 
         <Route path="/detail/:id">
-            <Detail shoes={ shoes }/>
+          <Detail shoes={ shoes }/>
         </Route>
       </Switch>        
     </div>
   );
 }
+
 
 
 export default App;
