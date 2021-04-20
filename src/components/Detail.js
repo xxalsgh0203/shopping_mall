@@ -14,12 +14,7 @@ let DetialTitle = styled.h4`
 `;
 
 function Detail(props) {
-    // useEffect hook. life cycle hook 과 비슷한 역할을 한다.
-    // 2초뒤에 alert 창 사라지게
-    // 밑에 useEffect 는 Detail 이 나타나거나 업데이트 되자마자 실행
-    useEffect(()=>{
-        setTimeout(()=>{updatealertbox(false)}, 2000);
-    });
+
     let [alertbox, updatealertbox] = useState(true);
     let history = useHistory();
     let { id } = useParams();
@@ -27,7 +22,14 @@ function Detail(props) {
         return product.id==id
     });
 
-
+    // useEffect hook. life cycle hook 과 비슷한 역할을 한다.
+    // 2초뒤에 alert 창 사라지게
+    // 밑에 useEffect 는 Detail 이 나타나거나 업데이트 되자마자 실행
+    useEffect(()=>{
+        let timer = setTimeout(()=>{updatealertbox(false)}, 2000);
+        return ()=>{clearTimeout(timer)}; // Detail component 가 사라질때 timer 를 제거해줌. (버그를 염두해두며 코딩할수있음 예를들어 2초가 되기전에 뒤로가기누르면 나중에 버그가생길수있음)
+    }, []); // [..] 라는 state 가 변경될때만 실행되도록함. 빈칸이면 Detail 등장시 한번 실행하고 끝남
+    
     return (
         <div className="container">
             <DetailBox>
