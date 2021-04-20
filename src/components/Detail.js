@@ -22,6 +22,7 @@ function Detail(props) {
         return product.id==id
     });
 
+    
     // useEffect hook. life cycle hook 과 비슷한 역할을 한다.
     // 2초뒤에 alert 창 사라지게
     // 밑에 useEffect 는 Detail 이 나타나거나 업데이트 되자마자 실행
@@ -52,13 +53,26 @@ function Detail(props) {
                     <h4 className="pt-5">{ productDetailFound.title }</h4>
                     <p>{ productDetailFound.content }</p>
                     <p>{ productDetailFound.price }</p>
-                    <button className="btn btn-danger">Order</button> 
+
+                    <StockInfo stock={props.stock} productid={productDetailFound.id}></StockInfo>
+
+                    <button className="btn btn-danger" onClick={()=>{
+                        let newArray = [...props.stock];
+                        newArray[productDetailFound.id] -= 1;
+                        props.updateStock(newArray);
+                    }}>Order</button> 
                     <button className="btn btn-danger" onClick={()=>{
                         history.goBack();
                     }}>GoBack</button> 
                 </div>
             </div>
         </div> 
+    )
+}
+
+function StockInfo(props) {
+    return (
+        <p>stock: { props.stock[props.productid] }</p>
     )
 }
 

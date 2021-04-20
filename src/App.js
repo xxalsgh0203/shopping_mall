@@ -9,6 +9,7 @@ import Home from './components/Home.js';
 function App() {
 
   let [shoes, changeShoes] = useState(ProductInfo);
+  let [stock, updateStock] = useState([10,11,12]);
 
   return (
     <div className="App">
@@ -36,7 +37,7 @@ function App() {
         </Route>
 
         <Route path="/detail/:id">
-          <Detail shoes={ shoes }/>
+          <Detail shoes={ shoes } stock = {stock} updateStock={updateStock}/>
         </Route>
       </Switch>        
     </div>
