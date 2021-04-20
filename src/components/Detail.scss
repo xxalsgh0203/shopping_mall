@@ -28,6 +28,10 @@ $maincolor : #ff0000; // 메인컬러를 만들어서 변수에 저장해두고 
     margin-bottom: 0;
 }
 
+.btn btn-danger {
+    margin-left: 10px;
+}
+
 // scss 는 아래와 같이 nesting 해서 사용할 수 있음
 // div.container {
 //     h4 {
