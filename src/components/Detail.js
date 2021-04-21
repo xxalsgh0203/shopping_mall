@@ -2,6 +2,8 @@ import React, {useEffect, useState} from 'react';
 import { useHistory, useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import './Detail.scss';
+import {Nav} from 'react-bootstrap'
+import {CSSTransition} from "react-transition-group"
 
 
 let DetailBox = styled.div`
@@ -21,8 +23,8 @@ function Detail(props) {
     let productDetailFound = props.shoes.find(function(product){
         return product.id==id
     });
-
-    
+    let [tab, changetab] = useState(0);
+    let [animationSwitch, changeanimationSwitch] = useState(false);
     // useEffect hook. life cycle hook 과 비슷한 역할을 한다.
     // 2초뒤에 alert 창 사라지게
     // 밑에 useEffect 는 Detail 이 나타나거나 업데이트 되자마자 실행
@@ -66,6 +68,19 @@ function Detail(props) {
                     }}>GoBack</button> 
                 </div>
             </div>
+
+            <Nav className="mt-5" variant="tabs" defaultActiveKey="link-0">
+                <Nav.Item>
+                    <Nav.Link eventKey="link-0" onClick={()=>{changeanimationSwitch(false); changetab(0)}}>Option 1</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                    <Nav.Link eventKey="link-1" onClick={()=>{changeanimationSwitch(false); changetab(1)}}>Option 2</Nav.Link>
+                </Nav.Item>
+            </Nav>
+            
+            <CSSTransition in={animationSwitch} classNames="wow" timeout={500}>
+                <TabContent tab={tab} changeanimationSwitch={changeanimationSwitch}/>
+            </CSSTransition>
         </div> 
     )
 }
@@ -74,6 +89,24 @@ function StockInfo(props) {
     return (
         <p>stock: { props.stock[props.productid] }</p>
     )
+}
+
+function TabContent(props) {
+
+    useEffect(()=>{props.changeanimationSwitch(true)});
+    if(props.tab == 0){
+        return (
+            <div>1번째 내용입니다</div>
+        )
+    }else if(props.tab == 1){
+        return (
+            <div>2번째 내용입니다</div>
+        )
+    }else if(props.tab == 2){
+        return (
+            <div>3번째 내용입니다</div>
+        )
+    }
 }
 
 

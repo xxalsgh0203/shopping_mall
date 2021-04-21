@@ -32,6 +32,15 @@ $maincolor : #ff0000; // 메인컬러를 만들어서 변수에 저장해두고 
     margin-left: 10px;
 }
 
+.wow-enter { // 애니메이션 시작 때 적용할 CSS
+    opacity: 0;
+}
+
+.wow-enter-active { // 애니메이션 동작 때 적용할 CSS
+    opacity: 1;
+    transition: all 500ms;
+}
+
 // scss 는 아래와 같이 nesting 해서 사용할 수 있음
 // div.container {
 //     h4 {
