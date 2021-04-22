@@ -94,15 +94,15 @@ function StockInfo(props) {
 function TabContent(props) {
 
     useEffect(()=>{props.changeanimationSwitch(true)});
-    if(props.tab == 0){
+    if(props.tab === 0){
         return (
             <div>1번째 내용입니다</div>
         )
-    }else if(props.tab == 1){
+    }else if(props.tab === 1){
         return (
             <div>2번째 내용입니다</div>
         )
-    }else if(props.tab == 2){
+    }else if(props.tab === 2){
         return (
             <div>3번째 내용입니다</div>
         )

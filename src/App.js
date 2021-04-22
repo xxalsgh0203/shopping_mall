@@ -1,10 +1,11 @@
 import './App.css';
 import React, {useState} from 'react';
-import { Navbar, Nav, NavDropdown, Jumbotron, Button} from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown} from 'react-bootstrap';
 import ProductInfo from './data';
 import { Link, Route, Switch } from 'react-router-dom';
 import Detail from './components/Detail.js';
 import Home from './components/Home.js';
+import Cart from './Cart.js';
 
 function App() {
 
@@ -38,6 +39,10 @@ function App() {
 
         <Route path="/detail/:id">
           <Detail shoes={ shoes } stock = {stock} updateStock={updateStock}/>
+        </Route>
+
+        <Route path="/cart">
+          <Cart></Cart>
         </Route>
       </Switch>        
     </div>
