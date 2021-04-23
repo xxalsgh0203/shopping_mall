@@ -1,8 +1,11 @@
 import React from 'react'
+import {useState} from 'react';
 import {Table} from 'react-bootstrap'
 import { connect } from 'react-redux'
 
 function Cart(props){
+
+    let [alertbox, updatealertbox] = useState(true);
     return (
         <div>
             <Table responsive>
@@ -29,6 +32,13 @@ function Cart(props){
                 }
 
             </Table>
+
+            {
+                alertbox == true
+                ? <EventAlert updatealertbox={updatealertbox}/>
+                : null        
+            }
+
         </div>
     )
 }
@@ -37,6 +47,15 @@ function statetoProps(state){
     return {
         state : state
     }
+}
+
+function EventAlert(props) {
+    return (
+        <div className="my-alert-yellow">
+            <p>Recieve 20% off by ordering within 24 hours</p>
+            <button onClick={()=>{props.updatealertbox(false)}}>close</button>
+        </div>
+    )
 }
 
 export default connect(statetoProps)(Cart)

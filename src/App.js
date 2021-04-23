@@ -5,7 +5,7 @@ import ProductInfo from './data';
 import { Link, Route, Switch } from 'react-router-dom';
 import Detail from './components/Detail.js';
 import Home from './components/Home.js';
-import Cart from './Cart.js';
+import Cart from './components/Cart.js';
 
 function App() {
 

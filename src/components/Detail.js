@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import './Detail.scss';
 import {Nav} from 'react-bootstrap'
 import {CSSTransition} from "react-transition-group"
-
+import { connect } from 'react-redux'
 
 let DetailBox = styled.div`
     padding-top : 30px;
@@ -62,6 +62,8 @@ function Detail(props) {
                         let newArray = [...props.stock];
                         newArray[productDetailFound.id] -= 1;
                         props.updateStock(newArray);
+                        props.dispatch({type : 'addtocart', payload : {title: productDetailFound.title, content: productDetailFound.id}})
+                        history.push('/cart');
                     }}>Order</button> 
                     <button className="btn btn-danger" onClick={()=>{
                         history.goBack();
@@ -109,5 +111,11 @@ function TabContent(props) {
     }
 }
 
+function statetoprops(state){
+    return {
+      state : state
+    }
+  }
+  
+export default connect(statetoprops)(Detail)
 
-export default Detail;

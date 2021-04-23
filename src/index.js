@@ -8,13 +8,17 @@ import {Provider} from 'react-redux';
 import {createStore} from 'redux';
 
 let cartstate = [
-  {id: 0, name: '멋진신발', quantity: 2}, 
-  {id: 1, name: '꾸진신발', quantity: 3}, 
-  {id: 2, name: '물컹신발', quantity: 2}
+  {id: 0, name: '멋진신발', quantity: 101}, 
+  {id: 1, name: '꾸진신발', quantity: 100}, 
+  {id: 2, name: '물컹신발', quantity: 121}
 ];
 
 function reducer(state = cartstate, action){
-  if(action.type == 'add'){
+  if(action.type == 'addtocart'){
+    let newArray = [...state];
+    newArray.push({id: action.payload.id, name: action.payload.title, quantity: 100});
+    return newArray;
+  }else if(action.type == 'add'){
     let newArray = [...state];
     newArray[action.id].quantity++;
     return newArray;

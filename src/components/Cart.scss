@@ -1,0 +1,18 @@
+@mixin func() { // 함수처럼 만들어서 사용할 수 있음
+    background: #eeee;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+}
+
+
+.my-alert {
+    @include func();
+}
+
+.my-alert-yellow {
+    @extend .my-alert; // extend 해서 사용할 수 있음
+    background: #ffe591;
+}
