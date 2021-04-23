@@ -7,7 +7,31 @@ import { BrowserRouter } from 'react-router-dom';
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
 
-let store = createStore(()=>{ return [{id: 0, name: '멋진신발', quantity: 2}] });
+let cartstate = [
+  {id: 0, name: '멋진신발', quantity: 2}, 
+  {id: 1, name: '꾸진신발', quantity: 3}, 
+  {id: 2, name: '물컹신발', quantity: 2}
+];
+
+function reducer(state = cartstate, action){
+  if(action.type == 'add'){
+    let newArray = [...state];
+    newArray[action.id].quantity++;
+    return newArray;
+  }else if(action.type == 'minus'){
+    let newArr = [...state];
+    newArr[action.id].quantity--;
+
+    if(newArr[action.id].quantity < 0)
+      newArr[action.id].quantity = 0;
+
+    return newArr;
+  }else{
+    return state
+  }
+}
+
+let store = createStore(reducer);
 
 ReactDOM.render(
   <React.StrictMode>

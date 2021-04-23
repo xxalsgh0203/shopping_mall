@@ -13,13 +13,16 @@ function Cart(props){
                     <th>정보</th>
                 </tr>
                 {
-                    props.state.map(function(product){
+                    props.state.map(function(product, i){
                         return (
-                            <tr>
-                                <td>1</td>
+                            <tr key = {i}>
+                                <td>{i+1}</td>
                                 <td>{product.name}</td>
                                 <td>{product.quantity}</td>
-                                <td>{product.id}</td>
+                                <td>
+                                    <button onClick={()=>{ props.dispatch({type : 'add', id : i})}}>+</button>
+                                    <button onClick={()=>{ props.dispatch({type : 'minus', id : i})}}>-</button>
+                                </td>
                             </tr>
                         )
                     })
