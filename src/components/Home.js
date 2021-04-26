@@ -25,7 +25,7 @@ function Home(props) {
                 {
                     shoes.map(function(shoe, i){
                         return (
-                            <Link to={"/detail/" + i}><ShoesinStock shoes={ shoe } i={i} key={i}/></Link>
+                            <ShoesinStock shoes={ shoe } i={i} key={i}/>
                         )  
                     })
                 }

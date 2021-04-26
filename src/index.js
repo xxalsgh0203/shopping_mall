@@ -15,9 +15,17 @@ let cartstate = [
 
 function reducer(state = cartstate, action){
   if(action.type == 'addtocart'){
-    let newArray = [...state];
-    newArray.push({id: action.payload.id, name: action.payload.title, quantity: 100});
-    return newArray;
+    let found = state.findIndex((a)=>{ return a.id === action.id })
+    if(found >= 0){
+      let newArray = [...state];
+      newArray[found].quantity++;
+      return newArray;
+    }else{
+      let newArray = [...state];
+      newArray.push({id: action.payload.id, name: action.payload.title, quantity: 100});
+      return newArray;
+    }
+
   }else if(action.type == 'add'){
     let newArray = [...state];
     newArray[action.id].quantity++;

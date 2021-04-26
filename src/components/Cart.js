@@ -23,7 +23,7 @@ function Cart(props){
                                 <td>{product.name}</td>
                                 <td>{product.quantity}</td>
                                 <td>
-                                    <button onClick={()=>{ props.dispatch({type : 'add', id : i})}}>+</button>
+                                    <button onClick={()=>{ props.dispatch({type : 'add', id : product.id})}}>+</button>
                                     <button onClick={()=>{ props.dispatch({type : 'minus', id : i})}}>-</button>
                                 </td>
                             </tr>
