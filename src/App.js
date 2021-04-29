@@ -1,11 +1,15 @@
 import './App.css';
-import React, {useState} from 'react';
+import React, {useState, lazy, Suspense} from 'react';
 import { Navbar, Nav, NavDropdown} from 'react-bootstrap';
+import { useHistory, useParams } from 'react-router-dom';
 import ProductInfo from './data';
 import { Link, Route, Switch } from 'react-router-dom';
 import Detail from './components/Detail.js';
+// let Detail = lazy(()=>{ import('./components/Detail.js') });
+// 바로 Detail 을 load 하지 않고 사용할때 로드
 import Home from './components/Home.js';
 import Cart from './components/Cart.js';
+import RecentView from './components/RecentView.js';
 
 function App() {
 
@@ -22,7 +26,7 @@ function App() {
             <Nav.Link as={Link} to="/"> Home </Nav.Link> 
             <Nav.Link as={Link} to="/detail">Detail</Nav.Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="/recentview">Recent View</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
               <NavDropdown.Divider />
@@ -43,6 +47,10 @@ function App() {
 
         <Route path="/cart">
           <Cart></Cart>
+        </Route>
+
+        <Route path="/recentview">
+          <RecentView shoes={ shoes }></RecentView>
         </Route>
       </Switch>        
     </div>

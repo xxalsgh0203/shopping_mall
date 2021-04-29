@@ -19,7 +19,7 @@ function Detail(props) {
 
     let [alertbox, updatealertbox] = useState(true);
     let history = useHistory();
-    let { id } = useParams();
+    let { id } = useParams(); // url 에 parameter 가져옴 
     let productDetailFound = props.shoes.find(function(product){
         return product.id==id
     });
@@ -32,7 +32,22 @@ function Detail(props) {
         let timer = setTimeout(()=>{updatealertbox(false)}, 2000);
         return ()=>{clearTimeout(timer)}; // Detail component 가 사라질때 timer 를 제거해줌. (버그를 염두해두며 코딩할수있음 예를들어 2초가 되기전에 뒤로가기누르면 나중에 버그가생길수있음)
     }, []); // [..] 라는 state 가 변경될때만 실행되도록함. 빈칸이면 Detail 등장시 한번 실행하고 끝남
-    
+
+    useEffect(()=>{
+        let arr = localStorage.getItem('viewed');
+        if(arr == null){
+            arr = [];
+        }
+        else{
+            arr = JSON.parse(arr);
+        }
+        
+        arr.push(id);
+        arr = new Set(arr); // set 자료구조 이용해서 중복제거
+        arr = [...arr];
+        localStorage.setItem('viewed', JSON.stringify(arr));
+    }, []);
+
     return (
         <div className="container">
             <DetailBox>
