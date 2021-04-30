@@ -24,7 +24,7 @@
 * If we click on products, the page moves to its detail page.   
 (Used Route to move into '/detail' page. (implemented in App.js)).   
 * It has some functions on this detail page.  
-1. order button   
+1. order button <p/>
    If we click this red order button, the page moves into '/cart' page.   
    spontaneously, it deducts from stock.   
 2. goBack button <p/>
