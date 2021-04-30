@@ -50,8 +50,8 @@
 
 # More function needed for this WebApp   
 1. Need to get datas from server, not data.js
-2. Need real cart page.
-
+2. Need real cart page.   
+3. Need to implement shopping cart page. (When we click add to cart button - it item goes into cart - Lets use local storage for it)
 
 
 
