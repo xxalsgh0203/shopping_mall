@@ -44,7 +44,7 @@
 <p />
 <hr />
 <img src="https://user-images.githubusercontent.com/62753490/116699332-69ff6800-aa00-11eb-8098-fcb1e37d9385.png" width="300" height="550">    
-* This is how it looks.   It shows items that i have viewed previously. Used local storage.   
+* This is how it looks.   It shows items that i have viewed previously.    Used local storage.   
 * When we click on items, the page move to its detail page.    
 
 
