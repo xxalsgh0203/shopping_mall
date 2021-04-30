@@ -14,7 +14,10 @@
 * Below, it shows various products. Got these products from data.js (hard coded).  
 * it also has "view more" button at the end of products and when the button is clicked, it shows more products.   
 * I got these additional data from server using axios.   
-   
+
+<p/>
+<p/>
+
 ## Detail page   
 <img src="https://user-images.githubusercontent.com/62753490/116695850-1db22900-a9fc-11eb-88fb-ede266cfbc25.png" width="300" height="550">   
 
@@ -31,12 +34,18 @@
    For now, this alert box only after when the page is loaded for two seconds, (used UseEffect)   
    but, afterward, i am going to add a function on it so that the alert box only appears when the stock is below 10.   
    
+<p/>
+<p/>
+
 ## Cart Page   
 <img src="https://user-images.githubusercontent.com/62753490/116697357-0b38ef00-a9fe-11eb-9891-92eed61c09c6.png" width="300" height="550">   
 * This page appears when we click on order button from '/detail' page. <p/>         
 * Gonna need many functions for this page, but not implemented yet. <p/> 
 * It now just has add/minus products functions. <p/>
 * Deduplicated the same products.   
+
+<p/>
+<p/>
 
 ## Recent view page   
 <img src="https://user-images.githubusercontent.com/62753490/116697833-a4680580-a9fe-11eb-9d53-0772b7c5e1ad.png" width="550" height="500">    
@@ -47,6 +56,8 @@
 * This is how it looks.   It shows items that i have viewed previously. Used local storage.   <p/>
 * When we click on items, the page move to its detail page.    
 
+<p/>
+<p/>
 
 # More function needed for this WebApp   
 1. Need to get datas from server, not data.js
