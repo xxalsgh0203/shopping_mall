@@ -49,7 +49,8 @@
 
 
 # More function needed for this WebApp   
-1. 
+1. Need to get datas from server, not data.js
+2. Need real cart page.
 
 
 
