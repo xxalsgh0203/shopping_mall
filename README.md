@@ -12,7 +12,7 @@
 * This is how it looks on its main page.   
 * Got Navbar and Jumbotron from Bootstrap.   
 * Below, it shows various products. Got these products from data.js (hard coded).  
-* it also has "view more" button at the end of products and if the button is clicked, it shows more products. I got these additional data from server using axios.   
+* it also has "view more" button at the end of products and when the button is clicked, it shows more products. I got these additional data from server using axios.   
    
 ## Detail page   
 <img src="https://user-images.githubusercontent.com/62753490/116695850-1db22900-a9fc-11eb-88fb-ede266cfbc25.png" width="300" height="550">   
