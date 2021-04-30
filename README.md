@@ -39,10 +39,10 @@
 
 ## Cart Page   
 <img src="https://user-images.githubusercontent.com/62753490/116697357-0b38ef00-a9fe-11eb-9891-92eed61c09c6.png" width="300" height="550">   
-* This page appears when we click on order button from '/detail' page. <p/>         
-* Gonna need many functions for this page, but not implemented yet. <p/> 
+* This page appears when we click on order button from '/detail' page.<p/>    
+* Gonna need many functions for this page, but not implemented yet. <p/>
 * It now just has add/minus products functions. <p/>
-* Deduplicated the same products.   
+* Deduplicated the same products. 
 
 <p/>
 <p/>
