@@ -1,8 +1,8 @@
 # Shopping mall App
 
-This is my first react project.
-Simply focusing on functions ! 
-Gonna add more functions and refactore some codes to look better.
+This is my first react project.   
+Simply focusing on functions !    
+Gonna add more functions and refactore some codes to look better.   
 
 ## Main page 
 
