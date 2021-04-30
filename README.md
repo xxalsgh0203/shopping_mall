@@ -28,15 +28,21 @@
 3. Alert ( Out of Stock) 
    For now, this alert box only after when the page is loaded for two seconds, (used UseEffect) but, afterward, i am going to add a function on it so that the alert box only appears when the stock is below 10.   
    
-# Cart Page   
+## Cart Page   
 <img src="https://user-images.githubusercontent.com/62753490/116697357-0b38ef00-a9fe-11eb-9891-92eed61c09c6.png" width="300" height="550">   
 * This page appears when we click on order button from '/detail' page.
 * Gonna need many functions for this page, but not implemented yet.   
 * It now just has add/minus products functions.
 * Deduplicated the same products.   
 
-# Recent view page   
+## Recent view page   
 <img src="https://user-images.githubusercontent.com/62753490/116697833-a4680580-a9fe-11eb-9d53-0772b7c5e1ad.png" width="550" height="500">  
+* On navbar, there's 'recent view' section. If we click on it, the page moves to '/recent' page.   
+<img src="https://user-images.githubusercontent.com/62753490/116699332-69ff6800-aa00-11eb-8098-fcb1e37d9385.png" width="300" height="550">   
+
+
+
+
 
 
 
