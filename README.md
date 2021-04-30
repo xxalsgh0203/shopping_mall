@@ -11,7 +11,7 @@
 
 * This is how it looks on its main page.   
 * Got Navbar and Jumbotron from Bootstrap.   
-* Below, it shows various products. Got these products from data.js(hard coded).  
+* Below, it shows various products. Got these products from data.js (hard coded).  
 * it also has "view more" button at the end of products and if the button is clicked, it shows more products. I got these additional data from server using axios.   
    
 ## Detail page   
@@ -19,5 +19,11 @@
 
 * If we click on products, the page moves to its detail page.   
 (Used Route to move into '/detail' page. (implemented in App.js)).   
-*
+* It has some functions on this detail page.  
+1. order button   
+   If we click this red order button, the page moves into '/cart' page.   
+   spontaneously, it deducts from stock.
+2. goBack button
+   If we click on GoBack button, the page goes back to previous web page. Used 'useHistory' from react to implement this function. 
+
 
