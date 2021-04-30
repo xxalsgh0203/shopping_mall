@@ -27,10 +27,10 @@
 1. order button   
    If we click this red order button, the page moves into '/cart' page.   
    spontaneously, it deducts from stock.   
-2. goBack button
+2. goBack button <p/>
    If we click on GoBack button, the page goes back to previous web page.   
    Used 'useHistory' from react to implement this function.   
-3. Alert ( Out of Stock) 
+3. Alert ( Out of Stock) <p/>
    For now, this alert box only after when the page is loaded for two seconds, (used UseEffect)   
    but, afterward, i am going to add a function on it so that the alert box only appears when the stock is below 10.   
    
