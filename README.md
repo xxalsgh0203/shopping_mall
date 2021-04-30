@@ -37,7 +37,7 @@
 
 ## Recent view page   
 <img src="https://user-images.githubusercontent.com/62753490/116697833-a4680580-a9fe-11eb-9d53-0772b7c5e1ad.png" width="550" height="500">  
-* On navbar, there's 'recent view' section. If we click on it, the page moves to '/recent' page.   
+* On navbar, there's 'recent view' section. If we click on it, the page moves to '/recent' page.         
 <img src="https://user-images.githubusercontent.com/62753490/116699332-69ff6800-aa00-11eb-8098-fcb1e37d9385.png" width="300" height="550">   
 
 
