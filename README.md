@@ -38,9 +38,16 @@
 ## Recent view page   
 <img src="https://user-images.githubusercontent.com/62753490/116697833-a4680580-a9fe-11eb-9d53-0772b7c5e1ad.png" width="550" height="500">    
 * On navbar, there's 'recent view' section. If we click on it, the page moves to '/recent' page.         
-<p/>
+<p />
 <hr />
-<img src="https://user-images.githubusercontent.com/62753490/116699332-69ff6800-aa00-11eb-8098-fcb1e37d9385.png" width="300" height="550">   
+<img src="https://user-images.githubusercontent.com/62753490/116699332-69ff6800-aa00-11eb-8098-fcb1e37d9385.png" width="300" height="550">    
+* This is how it looks. It shows items that i have viewed previously. Used local storage. 
+* When we click on items, the page move to its detail page.   
+
+<p />
+<hr />
+# More function needed for this WebApp   
+1. 
 
 
 
