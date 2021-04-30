@@ -12,7 +12,8 @@
 * This is how it looks on its main page.   
 * Got Navbar and Jumbotron from Bootstrap.   
 * Below, it shows various products. Got these products from data.js (hard coded).  
-* it also has "view more" button at the end of products and when the button is clicked, it shows more products. I got these additional data from server using axios.   
+* it also has "view more" button at the end of products and when the button is clicked, it shows more products.   
+* I got these additional data from server using axios.   
    
 ## Detail page   
 <img src="https://user-images.githubusercontent.com/62753490/116695850-1db22900-a9fc-11eb-88fb-ede266cfbc25.png" width="300" height="550">   
@@ -24,9 +25,11 @@
    If we click this red order button, the page moves into '/cart' page.   
    spontaneously, it deducts from stock.   
 2. goBack button
-   If we click on GoBack button, the page goes back to previous web page. Used 'useHistory' from react to implement this function.   
+   If we click on GoBack button, the page goes back to previous web page.   
+   Used 'useHistory' from react to implement this function.   
 3. Alert ( Out of Stock) 
-   For now, this alert box only after when the page is loaded for two seconds, (used UseEffect) but, afterward, i am going to add a function on it so that the alert box only appears when the stock is below 10.   
+   For now, this alert box only after when the page is loaded for two seconds, (used UseEffect)   
+   but, afterward, i am going to add a function on it so that the alert box only appears when the stock is below 10.   
    
 ## Cart Page   
 <img src="https://user-images.githubusercontent.com/62753490/116697357-0b38ef00-a9fe-11eb-9891-92eed61c09c6.png" width="300" height="550">   
