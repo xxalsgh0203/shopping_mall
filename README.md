@@ -48,7 +48,7 @@
 * When we click on items, the page move to its detail page.   
 
 <p />
-<hr />
+<hr />   
 # More function needed for this WebApp   
 1. 
 
