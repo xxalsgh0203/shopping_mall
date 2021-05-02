@@ -54,7 +54,7 @@
 <hr />
 <img src="https://user-images.githubusercontent.com/62753490/116699332-69ff6800-aa00-11eb-8098-fcb1e37d9385.png" width="300" height="550">    
 * This is how it looks.   It shows items that i have viewed previously. Used local storage.   <p/>
-* When we click on items, the page move to its detail page.    
+* When we click on items, the page moves into its detail page.    
 
 <p/>
 <p/>
@@ -62,7 +62,7 @@
 # More function needed for this WebApp   
 1. Need to get datas from server, not data.js
 2. Need real cart page.   
-3. Need to implement shopping cart page. (When we click add to cart button - it item goes into cart - Lets use local storage for it)
+3. Need to implement shopping cart page. (When we click add to cart button - its item goes into cart - Lets use local storage for it)
 
 
 
